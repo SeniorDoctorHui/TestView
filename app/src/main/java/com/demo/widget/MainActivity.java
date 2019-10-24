@@ -9,14 +9,27 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import com.demo.widget.adapter.StackLayoutMangerAdapter;
+import com.demo.widget.test.RxTest;
 import com.meis.widget.manager.StackLayoutManager;
 import com.meis.widget.mobike.MoBikeView;
+
+import io.reactivex.Observable;
+import io.reactivex.ObservableEmitter;
+import io.reactivex.ObservableOnSubscribe;
+import io.reactivex.ObservableSource;
+import io.reactivex.Observer;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Consumer;
+import io.reactivex.functions.Function;
+import io.reactivex.schedulers.Schedulers;
 
 public class MainActivity extends AppCompatActivity implements SensorEventListener {
 
@@ -64,6 +77,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
         addViews();
 
+
         mMobikeView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -88,6 +102,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 }
             }
         }));
+
     }
 
     @Override
@@ -143,4 +158,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     public void onTest(View view){
         startActivity(new Intent(this, TestActivity.class));
     }
+
+
 }
