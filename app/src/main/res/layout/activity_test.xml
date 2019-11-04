@@ -5,9 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TestActivity">
-    <com.demo.widget.huige.RoundRectView
+    <!--<com.demo.widget.huige.RoundRectView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:background="@color/colorPrimary"-->
+        <!--android:layout_height="match_parent" />-->
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:background="@color/colorPrimary"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tv_paint1"
+            android:textSize="15sp"
+            android:text="333333"
+            android:textColor="@android:color/holo_orange_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_paint"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </FrameLayout>
 
 </android.support.constraint.ConstraintLayout>

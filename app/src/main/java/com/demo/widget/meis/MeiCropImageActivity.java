@@ -55,6 +55,8 @@ public class MeiCropImageActivity extends AppCompatActivity {
 
         mRecyclerView.setAdapter(mMyAdapter = new MyAdapter());
 
+
+
         List<Integer> datas = new ArrayList<>();
         for (int i = 0; i < 100; i++) {
             datas.add(i % 2);
